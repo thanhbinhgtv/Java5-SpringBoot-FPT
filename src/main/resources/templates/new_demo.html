@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>New Demo</title>
+</head>
+<body>
+	<div align="center">
+		<h1>List Demo</h1>
+		<a href="/home">Home Demo</a> 
+		<br>
+		<form action="#" th:action=@{/save} th:object=${demo} method="Post">
+			<table border="1" cellpadding="10">
+				<tr>
+					<td>Demo Name</td>
+					<td><input type="text" th:field=*{name}></td>
+				</tr>
+				<tr>
+					<td>Demo Phone</td>
+					<td><input type="text" th:field=*{phone}></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Save</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
